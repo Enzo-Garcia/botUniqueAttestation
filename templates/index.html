@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="row">
+    <div class="col-md-8">
+        <table class="table table-striped table-md table-bordered bg-white">
+            <thead>
+                <tr>
+                    <td>rank</td>
+                    <td>wallet</td>
+                    <td>attestation</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for wallet in wallets %}
+                    <tr>
+                        <td>{{ wallet.0 }}</td>
+                        <td>{{ wallet.1 }}</td>
+                        <td>{{ wallet.2 }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock %}
